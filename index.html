@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Tabungan Rumah</title>
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="/project/Kalkulator-Tabungan-Rumah/style.css">
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1 class="title">Kalkulator Tabungan Rumah</h1>
+    
+            <form action="" id="tabunganForm" class="tabunganForm">
+                <div class="form-group">
+                    <label for="harga">Harga Rumah</label>
+                    <input type="text" id="harga" name="harga" placeholder="Masukkan harga rumah" required>
+                </div>
+                <div class="form-group">
+                    <label for="uangMuka">Uang Muka (%)</label>
+                    <input type="text" id="uangMuka" name="uangMuka" placeholder="Masukkan persentase uang muka (misalnya 20)" required>
+                </div>
+                <div class="form-group">
+                    <label for="jumlahTabunganBulan">Jumlah Tabungan yang Harus Disisihkan Setiap Bulan</label>
+                    <input type="text" id="jumlahTabunganBulan" name="jumlahTabunganBulan" placeholder="Masukkan jumlah tabungan yang harus disisihkan setiap bulan" required>
+                </div>
+                <div class="form-group">
+                    <label for="bungaTabungan">Bunga Tahunan Tabungan (%)</label>
+                    <input type="text" id="bungaTabungan" name="bungaTabungan" placeholder="Masukkan bunga tahunan tabungan jika ada">
+                </div>
+                <div class="form-group">
+                    <label for="lamaTabungan">Total Tabungan yang Ingin Dicapai (dalam bulan)</label>
+                    <input type="text" id="lamaTabungan" name="lamaTabungan" placeholder="Masukkan total waktu menabung dalam bulan" required>
+                </div>
+                <button type="submit" id="submitTabungan">Hitung Estimasi Tabungan</button>
+            </form>
+    
+            <!-- Menampilkan hasil -->
+            <div id="hasilPerhitungan" class="hasilPerhitungan" style="display:none;">
+                <h2>Hasil Perhitungan:</h2>
+                <p><strong>Total Harga Rumah: </strong>Rp. <span id="totalHargaRumah"></span></p>
+                <p><strong>Total Uang Muka: </strong>Rp. <span id="totalUangMuka"></span></p>
+                <p><strong>Jumlah Tabungan Bulanan: </strong>Rp. <span id="totalTabunganBulanan"></span></p>
+                <p><strong>Total Tabungan Setelah Diperhitungkan Bunga: </strong>Rp. <span id="totalTabunganDenganBunga"></span></p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/project/Kalkulator-Tabungan-Rumah/script.js"></script>
+</body>
+</html>
