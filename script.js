@@ -27,11 +27,11 @@ document.getElementById('submitTabungan').addEventListener('click', function() {
     event.preventDefault(); // Mencegah form submit
 
     // Ambil nilai input
-    let hargaRumah = removeFormatting(document.getElementById('harga').value);
-    let uangMukaPersen = removeFormatting(document.getElementById('uangMuka').value);
+    let hargaRumah          = removeFormatting(document.getElementById('harga').value);
+    let uangMukaPersen      = removeFormatting(document.getElementById('uangMuka').value);
     let jumlahTabunganBulan = removeFormatting(document.getElementById('jumlahTabunganBulan').value);
-    let bungaTabungan = removeFormatting(document.getElementById('bungaTabungan').value);
-    let lamaTabungan = removeFormatting(document.getElementById('lamaTabungan').value);
+    let bungaTabungan       = removeFormatting(document.getElementById('bungaTabungan').value);
+    let lamaTabungan        = removeFormatting(document.getElementById('lamaTabungan').value);
 
     // Lakukan perhitungan menggunakan nilai yang sudah dibersihkan
     let uangMuka = hargaRumah * (uangMukaPersen / 100);
@@ -40,9 +40,9 @@ document.getElementById('submitTabungan').addEventListener('click', function() {
     let totalTabunganDenganBunga = totalTabungan * (1 + (bungaTabungan / 100));
 
     // Menampilkan hasil perhitungan
-    document.getElementById('totalHargaRumah').innerText = hargaRumah.toLocaleString();
-    document.getElementById('totalUangMuka').innerText = uangMuka.toLocaleString();
-    document.getElementById('totalTabunganBulanan').innerText = jumlahTabunganBulan.toLocaleString();
+    document.getElementById('totalHargaRumah').innerText          = hargaRumah.toLocaleString();
+    document.getElementById('totalUangMuka').innerText            = uangMuka.toLocaleString();
+    document.getElementById('totalTabunganBulanan').innerText     = jumlahTabunganBulan.toLocaleString();
     document.getElementById('totalTabunganDenganBunga').innerText = totalTabunganDenganBunga.toLocaleString();
-    document.getElementById('hasilPerhitungan').style.display = 'block';
+    document.getElementById('hasilPerhitungan').style.display     = 'block';
 });
